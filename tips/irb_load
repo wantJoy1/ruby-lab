@@ -1,0 +1,2 @@
+after launch irb
+require "./myfile.rb"
