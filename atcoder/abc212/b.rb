@@ -1,10 +1,10 @@
-X = gets().chars.map(&:to_i)
+X = gets().strip.chars.map(&:to_i)
 
 def is_success(ary)
   ans = true
-  for i in ary.each_index.drop(1)
-    l,r = ary[i-1], ary[i]
-    ans &&= (r-l) == 1
+  for i in 0..2
+    l,r = ary[i], ary[i+1]
+    ans = false if (l+1)%10 != r
   end
   ans
 end
