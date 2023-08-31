@@ -1,0 +1,32 @@
+ref: https://qiita.com/y4u0t2a1r0/items/7504bf99563001cab503
+
+conclusion:
+	use block and lambda
+	proc is a little discouraged
+
+block: closure(possible to refer the local variable)
+x = 10
+y = 3
+5.times do
+	puts x * y
+end
+# 30, 30, 30
+
+proc: block as object
+
+# example 1
+x = 1
+y = 1
+block = Proc.new { |z| (x+y) * z }
+puts block.call(10) # 20
+
+# example 2
+x = 1
+y = 1
+def output(&block)
+  block.call * 10
+end
+puts output { x + y } # 20
+
+lambda: one of the proc
+it's different on 'scope on return' and 'error on argument'

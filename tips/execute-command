@@ -1,0 +1,4 @@
+`echo ruby`
+%x(echo ruby)
+system('echo ruby')
+exec('echo ruby')

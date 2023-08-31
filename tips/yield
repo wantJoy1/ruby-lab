@@ -1,0 +1,5 @@
+def output
+	yield * 10
+end
+
+puts output { 5 } # => 50
